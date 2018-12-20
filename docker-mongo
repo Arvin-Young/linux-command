@@ -1,0 +1,25 @@
+1、拉镜像
+命令:sudo docker pull mongo
+
+2、运行容器
+命令：sudo docker run --name some-mongo -p 27017:27017 -d mongo --auth 
+
+-p 27017:27017：映射端口
+
+3、进入容器
+命令：sudo docker exec -it some-mongo mongo admin
+
+4、创建用户
+命令: use  admin    进入admin数据库
+
+命令：db.createUser( { user: "admin",  pwd: "admin",  roles: [ { role: "root", db: "admin" } ] } )  
+命令:db.createUser( { user: "root",  pwd: "root",  roles: [ { role: "root", db: "admin" } ] } )  
+
+5、认证用户
+命令：db.auth("用户名","密码")
+
+db.auth("admin","admin")
+
+db.auth("root","root")
+
+链接：https://www.jianshu.com/p/64dd1be2e436
