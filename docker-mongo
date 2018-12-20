@@ -22,4 +22,7 @@ db.auth("admin","admin")
 
 db.auth("root","root")
 
+6、显示所有用户列表
+命令：show users
+
 链接：https://www.jianshu.com/p/64dd1be2e436
