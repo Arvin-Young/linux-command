@@ -1,1 +1,4 @@
 docker run -p 6379:6379 --name redis1 -d redis redis-server --appendonly yes
+
+docker exec -it redis1 /bin/bash
+
